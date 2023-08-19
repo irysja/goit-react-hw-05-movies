@@ -24,7 +24,7 @@ function Home() {
 
 export default Home;*/
 
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 
 function Home() {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -58,9 +58,9 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home;*/
 
-/*import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 
 function Home() {
@@ -92,6 +92,6 @@ function Home() {
   );
 }
 
-export default Home;*/
+export default Home;
 
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useMatch } from 'react-router-dom'; // Use 'useMatch' here
+import { Link, useMatch } from 'react-router-dom';
 import { getTrendingMovies, searchMovies } from './Api';
 
 function Movies() {
@@ -7,7 +7,7 @@ function Movies() {
   const [searchResults, setSearchResults] = useState([]);
   const [trendingMovies, setTrendingMovies] = useState([]);
 
-  const match = useMatch(); // Use 'useMatch' here
+  const match = useMatch();
 
   useEffect(() => {
     getTrendingMovies()
@@ -61,6 +61,10 @@ function Movies() {
 }
 
 export default Movies;
+
+
+
+
 
 
 

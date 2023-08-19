@@ -47,3 +47,31 @@ async function fetchReviewsData(movieId) {
   }
 }
 
+/*import React from 'react';
+
+function Reviews() {
+  // Здесь можно получить данные об обзорах из API или другого источника
+  const reviewsData = [
+    { id: 1, author: 'Author 1', content: 'Review Content 1' },
+    { id: 2, author: 'Author 2', content: 'Review Content 2' },
+    // ... другие обзоры
+  ];
+
+  return (
+    <div>
+      <h3>Reviews</h3>
+      <ul>
+        {reviewsData.map(review => (
+          <li key={review.id}>
+            <p>{review.author}</p>
+            <p>{review.content}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Reviews;*/
+
+

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -39,6 +38,34 @@ function Cast() {
 }
 
 export default Cast;
+
+/*import React from 'react';
+
+function Cast() {
+  // Здесь можно получить данные о актерском составе из API или другого источника
+  const castData = [
+    { id: 1, name: 'Actor 1', character: 'Character 1' },
+    { id: 2, name: 'Actor 2', character: 'Character 2' },
+    // ... другие актеры
+  ];
+
+  return (
+    <div>
+      <h3>Cast</h3>
+      <ul>
+        {castData.map(actor => (
+          <li key={actor.id}>
+            <p>{actor.name}</p>
+            <p>{actor.character}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Cast;*/
+
 
 
 

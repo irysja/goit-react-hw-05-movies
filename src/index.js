@@ -1,30 +1,30 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client'; 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import App from './components/App'; 
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './components/App';
+import './index.css';
 
-const LazyLoadedComponent = () => (
-  <div>
-    <h2>MyComponent</h2>
-    <p>This is a lazy-loaded component!</p>
-  </div>
-);
-
-const rootElement = document.getElementById('root');
-createRoot(rootElement).render(
-  <Router>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/lazy" element={<LazyLoadedComponent />} />
-    </Routes>
-  </Router>
+createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
 );
 
 
-
-
-
-
-
-
-
+    /*import React from 'react';
+    //import ReactDOM from 'react-dom';
+    import { createRoot } from 'react-dom/client';
+    import { BrowserRouter } from 'react-router-dom';
+    import App from './components/App';
+    import './index.css';
+    
+    createRoot(document.getElementById('root')).render(
+      <React.StrictMode>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </React.StrictMode>
+    );*/
+    
