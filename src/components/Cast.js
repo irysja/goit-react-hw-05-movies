@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 async function fetchCastData(movieId) {
@@ -37,34 +37,54 @@ function Cast() {
   );
 }
 
-export default Cast;
+export default Cast;*/
 
-/*import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { getMovieCast } from './Api';
 
 function Cast() {
-  // Здесь можно получить данные о актерском составе из API или другого источника
-  const castData = [
-    { id: 1, name: 'Actor 1', character: 'Character 1' },
-    { id: 2, name: 'Actor 2', character: 'Character 2' },
-    // ... другие актеры
-  ];
+  const { movieId } = useParams();
+  const [cast, setCast] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchCastData() {
+      try {
+        const castData = await getMovieCast(movieId);
+        setCast(castData);
+        setError(null);
+      } catch (error) {
+        console.error(error);
+        setError('Error fetching cast data. Please try again later.');
+      }
+    }
+
+    fetchCastData();
+  }, [movieId]);
 
   return (
     <div>
       <h3>Cast</h3>
-      <ul>
-        {castData.map(actor => (
-          <li key={actor.id}>
-            <p>{actor.name}</p>
-            <p>{actor.character}</p>
-          </li>
-        ))}
-      </ul>
+      {error ? (
+        <p>{error}</p>
+      ) : (
+        <ul>
+          {cast.map(actor => (
+            <li key={actor.id}>
+              <p>{actor.name}</p>
+              <p>{actor.character}</p>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
 
-export default Cast;*/
+export default Cast;
+
+
 
 
 
