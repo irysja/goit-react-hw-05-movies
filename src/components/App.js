@@ -7,7 +7,7 @@ import MovieDetails from './MovieDetails';
 import Cast from './Cast';
 import Reviews from './Reviews';
 import Layout from './Layout';
-import MoviesPage from './MoviesPage';
+//import MoviesPage from './MoviesPage';
 
 const MoviesPageLazy = lazy(() => import('./MoviesPage'));
 
