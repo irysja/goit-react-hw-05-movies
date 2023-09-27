@@ -23,7 +23,7 @@ export const searchMovies = async query => {
 
 
 // Api.js
-const API_KEY = '2ce7a18d838cceed905878ad2c5994f4';
+const API_KEY = '5c25f1c14a1f0927c063260c10836fbe';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 export const getTrendingMovies = async () => {
