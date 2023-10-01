@@ -7,7 +7,6 @@ function MoviesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const navigate = useNavigate();
 
   // Load search results from local storage when the component mounts
   useEffect(() => {

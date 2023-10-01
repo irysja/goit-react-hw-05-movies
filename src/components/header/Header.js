@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
+import React from 'react';
 //import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 //import { searchMovies } from '../api/Api'; // Import the searchMovies function
