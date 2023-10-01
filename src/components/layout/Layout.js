@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header'; // Import Header component
+import Header from '../header/Header'; // Import Header component
 
 function Layout({ children }) {
   return (

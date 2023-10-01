@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovieReviews } from './Api'; // Замените на вашу функцию для получения обзоров
+import { getMovieReviews } from '../api/Api'; // Замените на вашу функцию для получения обзоров
 
 function Reviews() {
   const { movieId } = useParams();
