@@ -1,6 +1,6 @@
 
 import React, { lazy, Suspense } from 'react';
-import { Route, Routes ,NavLink } from 'react-router-dom';
+import { Route, Routes  } from 'react-router-dom';
 import Home from '../home/Home';
 import MovieDetails from '../movieDetails/MovieDetails';
 import Cast from '../cast/Cast';
