@@ -7,15 +7,24 @@ function MoviesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  
 
   // Load search results from local storage when the component mounts
-  useEffect(() => {
+  /*useEffect(() => {
     const storedResults =
       JSON.parse(localStorage.getItem('searchResults')) || [];
     setSearchResults(storedResults);
+  }, []);*/
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+    if (query) {
+      setSearchQuery(query);
+    }
   }, []);
+  
 
-  const handleSearch = async event => {
+  /*const handleSearch = async event => {
     event.preventDefault();
     try {
       const data = await searchMovies(searchQuery);
@@ -26,7 +35,25 @@ function MoviesPage() {
     } catch (error) {
       console.error(error);
     }
+  };*/
+  const handleSearch = async event => {
+    event.preventDefault();
+    try {
+      const data = await searchMovies(searchQuery);
+      setSearchResults(data.results);
+  
+      // Сохраняем результаты в локальное хранилище
+      localStorage.setItem('searchResults', JSON.stringify(data.results));
+  
+      // Обновляем квери параметр в URL строке
+      const urlParams = new URLSearchParams();
+      urlParams.set('query', searchQuery);
+      window.history.replaceState(null, '', `?${urlParams}`);
+    } catch (error) {
+      console.error(error);
+    }
   };
+  
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);

@@ -1,4 +1,4 @@
-//import React, { useState } from 'react';
+/*//import React, { useState } from 'react';
 import React from 'react';
 //import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -22,4 +22,37 @@ function Header() {
   );
 }
 
+export default Header;*/
+
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './Header.css';
+
+function Header() {
+  return (
+    <header className="header">
+      <nav className="nav">
+        <ul>
+          <li>
+            <NavLink exact to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/movies" activeClassName="active">
+              Movies
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
 export default Header;
+
+
+
+
+
+
